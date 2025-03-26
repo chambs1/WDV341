@@ -20,5 +20,5 @@ try {
 }
 
 // Message to confirm connection
-//echo "Connected successfully!";
+echo "Connected successfully!";
 ?>
