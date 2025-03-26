@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+    }
+
+    form {
+      width: 600px;
+      margin: auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    form legend {
+      font-size: larger;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    form p {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: inline-block;
+      width: 150px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+      width: calc(100% - 170px);
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin-right: 5px;
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+      padding: 8px 16px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover,
+    input[type="reset"]:hover {
+      background-color: #0056b3;
+    }
+  </style>
+
+</head>
+
+<body>
+  <h2>UNIT 5 - Lesson 2 Server Side Forms</h2>
+  <p>This is an example input form that will demonstrate how a form connects to a server side process.</p>
+
+  <form id="form1" name="form1" method="post" action="files/formHandler.php">
+
+    <legend>Example Form</legend>
+
+    <p>
+      <label for="first_name">First Name:</label>
+      <input type="text" name="first_name" id="first_name" />
+    </p>
+
+    <p>
+      <label for="last_name">Last Name:</label>
+      <input type="text" name="last_name" id="last_name" />
+    </p>
+
+    <p>
+      <label for="school_name">School Name:</label>
+      <input type="text" name="school_name" id="school_name" required />
+    </p>
+
+    <p>
+      <label for="customer_email">Customer Email:</label>
+      <input type="email" name="customer_email" id="customer_email" required />
+    </p>
+
+    <p>
+      <label>Current Academic Standing:</label>
+      <p>
+        <input type="radio" name="academic_standing" value="High School" id="high_school">
+        <label for="high_school">High School</label>
+      </p>
+      <p>
+        <input type="radio" name="academic_standing" value="Freshman" id="freshman">
+        <label for="freshman">Freshman</label>
+      </p>
+      <p>
+        <input type="radio" name="academic_standing" value="Sophomore" id="sophomore">
+        <label for="sophomore">Sophomore</label>
+      </p>
+    </p>
+
+    <p>
+      <label>Program Choice:</label>
+      <select name="program_choice" id="program_choice" required>
+        <option value="">Default option</option>
+        <option value="CIS">Computer Information Systems</option>
+        <option value="GD">Graphic Design</option>
+        <option value="WD">Web Development</option>
+      </select>
+    </p>
+
+    <p>
+      <label for="contact_info"></label>
+      <input type="checkbox" name="contact_info" id="contact_info">
+      <span class="checkbox-label"><label for="contact_info">Send updates to my email</label></span>
+    </p>
+    <p>
+      <label for="newsletter"></label>
+      <input type="checkbox" name="newsletter" id="newsletter">
+      <span class="checkbox-label"><label for="newsletter">Subscribe to newsletter</label></span>
+    </p>
+
+    <p>
+      <label for="comments">Comments:</label>
+      <textarea name="comments" id="comments" rows="4" cols="50" placeholder="Enter any comments here..."></textarea>
+    </p>
+
+    <p style="text-align: center;">
+      <input type="submit" name="button" id="button" value="Submit" />
+      <input type="reset" name="button2" id="button2" value="Reset" />
+    </p>
+  </form>
+
+  <p>&nbsp;</p>
+</body>
+
+</html>
