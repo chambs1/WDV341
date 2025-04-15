@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Event</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/marx-css/css/marx.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f4f4f9;
+            /* Light grey background */
+        }
+
+        .form-container {
+            max-width: 500px;
+            width: 100%;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .form-group input[type="text"],
+        .form-group textarea,
+        .form-group select,
+        .form-group input[type="date"],
+        .form-group input[type="time"] {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .form-group button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .form-group button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <h1>Add Event</h1>
+
+        <form action="process-form.php" method="post">
+            <div class="form-group">
+                <label for="events_name">Event Name</label>
+                <input type="text" id="events_name" name="events_name" required placeholder="Enter event name">
+            </div>
+
+            <div class="form-group">
+                <label for="events_description">Description</label>
+                <textarea id="events_description" name="events_description"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="events_presenter">Presenter</label>
+                <input type="text" id="events_presenter" name="events_presenter" required placeholder="Enter presenter's name">
+            </div>
+
+            <div class="form-group">
+                <label for="events_date">Date</label>
+                <input type="date" id="events_date" name="events_date" required>
+            </div>
+
+            <div class="form-group">
+                <label for="events_time">Time</label>
+                <input type="time" id="events_time" name="events_time" required>
+            </div>
+
+            <button>Submit Event</button>
+        </form>
+    </div>
+</body>
+</html>

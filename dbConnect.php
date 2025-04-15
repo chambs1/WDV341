@@ -1,9 +1,9 @@
 <?php
-// Database connection parameters
+// Database connection parameters for localhost only
 $servername = "localhost";
-$username = "chambs1_wdv341";
-$password = "Yohimbine83$";
-$dbname = "chambs1_wdv341";
+$username = "root";
+$password = "";
+$dbname = "wdv341";
 
 try {
     // Create PDO connection
@@ -20,5 +20,5 @@ try {
 }
 
 // Message to confirm connection
-echo "Connected successfully!";
+//echo "Connected successfully!";
 ?>
