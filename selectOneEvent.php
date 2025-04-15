@@ -1,6 +1,6 @@
 <?php
     // Include the database connection
-    require_once('dbConnect.php');
+    require_once('db-Connect.php');
 
     // Set the character set
     $conn->query("SET NAMES utf8mb4");

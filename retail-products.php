@@ -244,7 +244,7 @@
     </section>
     <?php
 // Include the database connection file
-include('dbConnect.php');
+include('db-Connect.php');
 
 try {
     // SQL query to select all products from the database, sorted by product_name in descending order
