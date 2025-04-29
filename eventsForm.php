@@ -21,9 +21,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         require_once('db-connect.php');
         
         // Get form data and sanitize
-        $events_name = trim(filter_var($_POST['events_name'], FILTER_SANITIZE_STRING));
-        $events_description = trim(filter_var($_POST['events_description'], FILTER_SANITIZE_STRING));
-        $events_presenter = trim(filter_var($_POST['events_presenter'], FILTER_SANITIZE_STRING));
+        $events_name = trim(filter_var($_POST['events_name']));
+        $events_description = trim(filter_var($_POST['events_description']));
+        $events_presenter = trim(filter_var($_POST['events_presenter']));
         $events_date = $_POST['events_date'];
         $events_time = $_POST['events_time'];
         
